@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+Defines class Square
+"""
+
+
 class Square:
+    """ defines optional private size attribute """
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -7,5 +13,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    """ returns area of the square """
     def area(self):
-        return self.__size * self.__size
+        return self.__size ** 2

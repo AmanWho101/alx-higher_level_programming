@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+Defines class Square
+"""
+
+
 class Square:
+    """ defines private attribute """
     def __init__(self, size=0):
         self.__size = size
 
@@ -11,18 +17,21 @@ class Square:
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
-    def area(self):
-        return self.size * self.size
-
+    """ prints square with # in stdout """
     def my_print(self):
-        for i in range(0, self.size):
-            for j in range(0, self.size):
-                print("#", end="")
-            print("")
         if self.size == 0:
-            print("")
+            print()
+        else:
+            for i in range(self.size):
+                for j in range(self.size):
+                    print("#", end="")
+                print()
+
+    """ returns area of the square """
+    def area(self):
+        return self.size ** 2
