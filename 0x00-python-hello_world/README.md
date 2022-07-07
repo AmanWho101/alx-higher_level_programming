@@ -1,1 +1,1 @@
-# Python Hello world and C interview prep
+This is the first project made with Python and consists of knowing some of its bases.
